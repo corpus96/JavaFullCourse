@@ -20,8 +20,11 @@ public class Main {
         //referenceTypes();
         //Primitive_Reference();
         //String_Class();
-        Arithmetic_Operations();
-
+        //Arithmetic_Operations();
+        //Math_Class();
+        //Comparison_Operator();
+        //Logical_Operator();
+        if_Statements();
     }
 
     private static void referenceTypes(){
@@ -132,5 +135,56 @@ public class Main {
         System.out.println(10 % 2);
         System.out.println((10 * 2) + 7);
         System.out.println(10 * (2 + 7));
+    }
+
+    private static void Math_Class(){
+        System.out.println(Math.abs(-10));
+        System.out.println(Math.max(3.6, 10.11));
+        System.out.println(Math.min(3.6, 10.11));
+
+        //(int) cast the result into integer
+        System.out.println((int) Math.pow(5, 2));
+        System.out.println((int) Math.sqrt(25));
+
+        System.out.println(Math.PI);
+    }
+
+    private static void Comparison_Operator(){
+        int person1Age = 24;
+        int person2Age = 64;
+        boolean isOlder = person1Age > person2Age;
+
+        System.out.println(isOlder);
+        System.out.println(person1Age < person2Age);
+        System.out.println(person1Age <= person2Age);
+        System.out.println(person1Age >= person2Age);
+        System.out.println(person1Age == person2Age);
+        System.out.println(person1Age != person2Age);
+    }
+
+    private static void Logical_Operator(){
+        boolean isAdult = false;
+        boolean isStudent = true;
+        boolean isMember = true;
+        String name = "Emmanuel";
+
+        System.out.println(isAdult && isStudent); //returns false
+        System.out.println(!isAdult);
+        System.out.println(isAdult || isStudent);
+        System.out.println((isAdult || isStudent) && isMember);
+        System.out.println((10 > 8 || 2 <= 2) && !isAdult && name.contains("M"));
+    }
+
+    private static void if_Statements(){
+        int age = 17;
+
+        if(age >= 18){
+            System.out.println("Is Adult");
+        }else if(age >= 16 && age <= 18){
+            System.out.println("Almost an adult");
+        }
+        else{
+            System.out.println("Is not an adult");
+        }
     }
 }
